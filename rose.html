@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Small Gift 🌹</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@500;700&family=Fira+Code:wght@500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/rose.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND EFFECTS -->
+
+    <div class="vignette"></div>
+
+    <div class="spotlight"></div>
+
+    <div class="ambient-light" id="ambientLight"></div>
+
+
+    <!-- =====================================================
+         SMALL GIFT / TAP TO UNLOCK
+         ===================================================== -->
+
+    <div class="trigger-overlay" id="triggerOverlay">
+
+        <div class="glass-card">
+
+            <div class="card-glow"></div>
+
+            <div class="rose-icon">
+                🌹
+            </div>
+
+            <h2 class="title">
+                A Small Gift
+            </h2>
+
+            <p class="gift-message">
+                You’ve done so much for us.
+                This is our little way of giving back and doing something special for you,
+                with all the love and gratitude we have.
+            </p>
+
+            <button
+                class="start-button"
+                id="startButton">
+
+                <span class="btn-text">
+                    TAP TO UNLOCK
+                </span>
+
+                <span class="btn-shine"></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ROSE SCENE
+         ===================================================== -->
+
+    <div class="scene">
+
+        <div
+            class="rose-wrapper"
+            id="roseWrapper">
+
+
+            <!-- STEM + LEAVES -->
+
+            <div class="stem-group">
+
+                <div
+                    class="stem"
+                    id="stem">
+
+                    <div class="stem-highlight"></div>
+
+                </div>
+
+
+                <div
+                    class="thorn thorn-1"
+                    id="thorn1">
+                </div>
+
+
+                <div
+                    class="thorn thorn-2"
+                    id="thorn2">
+                </div>
+
+
+                <div
+                    class="leaf leaf-left"
+                    id="leafLeft">
+
+                    <div class="leaf-vein"></div>
+
+                </div>
+
+
+                <div
+                    class="leaf leaf-right"
+                    id="leafRight">
+
+                    <div class="leaf-vein"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CALYX -->
+
+            <div
+                class="calyx"
+                id="calyx">
+            </div>
+
+
+            <!-- ROSE HEAD -->
+
+            <div
+                class="rose-head"
+                id="roseHead">
+
+                <div class="rose-glow"></div>
+
+                <div class="rose-glow-inner"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         AFTER ROSE BLOOMS
+         ===================================================== -->
+
+    <div
+        class="end-text"
+        id="endText">
+
+        <p
+            class="tagline"
+            id="tagline">
+
+            This rose is a symbol of our respect and appreciation for you. Thank you for being a wonderful teacher.
+        </p>
+
+
+        <span class="rose-emoji">
+            🌹
+        </span>
+
+
+        <a
+            href="invitation.html"
+            class="invitation-button"
+            id="invitationButton">
+
+            ACCESS INVITATION →
+
+        </a>
+
+    </div>
+
+
+    <!-- FALLING PETALS -->
+
+    <div id="fallingPetals"></div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/rose.js"></script>
+
+</body>
+
+</html>

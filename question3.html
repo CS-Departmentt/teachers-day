@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security Layer 03</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/questions.css">
+</head>
+
+<body>
+
+    <div class="scanlines"></div>
+
+    <main class="question-container">
+
+        <div class="secure-header">
+            <span class="status-dot"></span>
+            SECURE RECOVERY MODE
+        </div>
+
+        <div class="progress-info">
+            <span>SECURITY LAYER</span>
+            <strong>03 / 05</strong>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 60%;"></div>
+        </div>
+
+        <section class="question-card">
+
+            <p class="question-label">
+                SECURITY QUESTION 03
+            </p>
+
+            <h1 id="questionText">
+                The first lecture has begun, but I’m nowhere in sight…<br>
+                What’s the most famous excuse students give
+                when they arrive late?
+                <br>
+                Students: “I got late because of _ _ _ _ _ _ _.”
+            </h1>
+
+            <p class="instruction">
+                Think carefully. The system is waiting for your answer.
+            </p>
+
+            <div class="answer-box">
+
+                <span>></span>
+
+                <input
+                    type="text"
+                    id="answerInput"
+                    placeholder="Enter your answer..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <button id="submitBtn" class="verify-button">
+                VERIFY ANSWER
+            </button>
+
+            <p id="message" class="message"></p>
+
+        </section>
+
+        <p class="footer-code">
+            ENCRYPTED_CONNECTION // LAYER_03
+        </p>
+
+    </main>
+
+    <script src="js/question3.js"></script>
+
+</body>
+</html>

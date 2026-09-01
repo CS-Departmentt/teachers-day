@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security Layer 01</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/questions.css">
+</head>
+
+<body>
+
+    <div class="scanlines"></div>
+
+    <main class="question-container">
+
+        <div class="secure-header">
+            <span class="status-dot"></span>
+            SECURE RECOVERY MODE
+        </div>
+
+        <div class="progress-info">
+            <span>SECURITY LAYER</span>
+            <strong>01 / 05</strong>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 20%;"></div>
+        </div>
+
+        <section class="question-card">
+
+            <p class="question-label">
+                SECURITY QUESTION 01
+            </p>
+
+            <h1 id="questionText">
+                I have many keys, but I can’t open a single lock.
+                I have a space, but I don’t have a room.
+                You can enter, but you can’t go inside.
+                <br>
+                What am I?
+            </h1>
+
+            <p class="instruction">
+                Enter the correct answer to unlock the next layer.
+            </p>
+
+            <div class="answer-box">
+
+                <span>></span>
+
+                <input
+                    type="text"
+                    id="answerInput"
+                    placeholder="Enter your answer..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <button id="submitBtn" class="verify-button">
+                VERIFY ANSWER
+            </button>
+
+            <p id="message" class="message"></p>
+
+        </section>
+
+        <p class="footer-code">
+            ENCRYPTED_CONNECTION // LAYER_01
+        </p>
+
+    </main>
+
+    <script src="js/question1.js"></script>
+
+</body>
+</html>

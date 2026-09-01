@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teachers' Day Invitation</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/invitation.css">
+</head>
+
+<body>
+
+    <main class="invitation-page">
+
+        <!-- ================= INVITATION CARD ================= -->
+
+        <div class="invitation-card" id="invitationCard">
+
+            <div class="ornament">
+                ✦ ───────── ✦ ───────── ✦
+            </div>
+
+            <p class="eyebrow">
+                WITH GRATITUDE & APPRECIATION
+            </p>
+
+            <h1>
+                Teachers'
+                <span>Day</span>
+            </h1>
+
+            <p class="intro">
+                The invitation has finally been recovered.
+                <br>
+                And now, it's time to celebrate you.
+            </p>
+
+            <div class="divider">
+                <span>✦</span>
+            </div>
+
+            <p class="invited">
+                YOU ARE CORDIALLY INVITED
+            </p>
+
+            <h2>
+                Teachers' Day Celebration
+            </h2>
+
+            <p class="message">
+                To the people who inspire us, guide us,
+                encourage us and make every lesson worth remembering.
+            </p>
+
+            <div class="details">
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        📅
+                    </div>
+
+                    <div>
+                        <small>DATE</small>
+                        <strong>05 SEPTEMBER 2026</strong>
+                    </div>
+
+                </div>
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        ⏰
+                    </div>
+
+                    <div>
+                        <small>TIME</small>
+                        <strong>10:00 AM ONWARDS</strong>
+                    </div>
+
+                </div>
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <small>VENUE</small>
+                        <strong>B.Ed Auditorium</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="quote">
+                A great teacher leaves a mark
+                that lasts far beyond the classroom.
+            </p>
+
+            <p class="closing">
+                With love, respect & endless gratitude,
+                <br>
+                <strong>Your Students</strong>
+            </p>
+
+            <div class="ornament bottom">
+                ✦
+            </div>
+
+        </div>
+
+
+        <!-- ================= DOWNLOAD BUTTON ================= -->
+
+        <button
+            id="downloadInvitation"
+            class="download-button">
+
+            <span>✦</span>
+            DOWNLOAD INVITATION
+            <span>↓</span>
+
+        </button>
+
+        <p class="download-note">
+            Save this invitation for a little memory.
+        </p>
+
+    </main>
+
+
+    <!-- html2canvas -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+    <!-- DOWNLOAD SCRIPT -->
+
+    <script>
+
+        const downloadButton =
+            document.getElementById("downloadInvitation");
+
+        const invitationCard =
+            document.getElementById("invitationCard");
+
+
+        downloadButton.addEventListener("click", async () => {
+
+            downloadButton.disabled = true;
+
+            downloadButton.innerHTML =
+                "CREATING INVITATION...";
+
+
+            try {
+
+                const canvas = await html2canvas(
+                    invitationCard,
+                    {
+                        scale: 2,
+                        backgroundColor: null,
+                        useCORS: true
+                    }
+                );
+
+
+                const image =
+                    canvas.toDataURL("image/png");
+
+
+                const link =
+                    document.createElement("a");
+
+                link.href = image;
+
+                link.download =
+                    "Teachers-Day-Invitation.png";
+
+
+                document.body.appendChild(link);
+
+                link.click();
+
+                document.body.removeChild(link);
+
+
+                downloadButton.innerHTML =
+                    "✓ INVITATION SAVED";
+
+
+                setTimeout(() => {
+
+                    downloadButton.innerHTML =
+                        "✦ DOWNLOAD INVITATION ↓";
+
+                    downloadButton.disabled = false;
+
+                }, 2000);
+
+
+            } catch (error) {
+
+                console.error(error);
+
+                downloadButton.innerHTML =
+                    "DOWNLOAD FAILED";
+
+                downloadButton.disabled = false;
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
