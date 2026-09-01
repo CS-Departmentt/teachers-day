@@ -5,6 +5,8 @@ const button = document.getElementById("submitBtn");
 const message = document.getElementById("message");
 const card = document.querySelector(".question-card");
 
+window.addEventListener("load", () => { input.focus(); });
+
 button.addEventListener("click", checkAnswer);
 
 input.addEventListener("keydown", function (event) {
