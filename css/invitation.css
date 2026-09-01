@@ -244,8 +244,79 @@
 .detail-icon {
     margin-bottom: 10px;
 
-    font-size: 20px;
+    font-size: 17px;
 }
+
+
+/* ================= CUSTOM CALENDAR ================= */
+
+.calendar-icon {
+    width: 23px;
+    height: 23px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(216, 180, 106, 0.35);
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    flex-shrink: 0;
+
+    padding: 0 !important;
+
+    box-sizing: border-box;
+}
+
+.calendar-month {
+    width: 100%;
+
+    padding: 4px 0 3px;
+
+    background: var(--gold);
+
+    color: #080b0f;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+
+    text-align: center;
+}
+
+.calendar-date {
+    padding-top: 5px;
+
+    color: #222;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* ================= DETAIL TEXT ================= */
 
 .detail small {
     display: block;
@@ -417,5 +488,20 @@
 
     .download-button {
         width: 240px;
+    }
+
+    /* CUSTOM CALENDAR - MOBILE */
+
+    .calendar-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .calendar-month {
+        font-size: 8px;
+    }
+
+    .calendar-date {
+        font-size: 17px;
     }
 }
