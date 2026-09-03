@@ -5,35 +5,56 @@ const button = document.getElementById("submitBtn");
 const message = document.getElementById("message");
 const card = document.querySelector(".question-card");
 
-window.addEventListener("load", () => { input.focus(); });
+
+/* ================= AUTO FOCUS ================= */
+
+window.addEventListener("load", () => {
+    input.focus({ preventScroll: true });
+});
+
 
 button.addEventListener("click", checkAnswer);
 
+
 input.addEventListener("keydown", function (event) {
+
     if (event.key === "Enter") {
         checkAnswer();
     }
+
 });
+
 
 function checkAnswer() {
 
     const answer = input.value.trim().toLowerCase();
 
+
     if (answer === correctAnswer) {
 
-        message.textContent = "✓ ACCESS VERIFIED — NEXT LAYER UNLOCKED";
-        message.className = "message success";
+        message.textContent =
+            "✓ ACCESS VERIFIED — NEXT LAYER UNLOCKED";
+
+        message.className =
+            "message success";
 
         button.disabled = true;
 
+
         setTimeout(() => {
+
             window.location.href = "question2.html";
+
         }, 900);
 
     } else {
 
-        message.textContent = "✕ INCORRECT ANSWER — ACCESS DENIED";
-        message.className = "message error";
+        message.textContent =
+            "✕ INCORRECT ANSWER — ACCESS DENIED";
+
+        message.className =
+            "message error";
+
 
         card.classList.remove("shake");
 
@@ -41,7 +62,11 @@ function checkAnswer() {
 
         card.classList.add("shake");
 
+
         input.value = "";
-        input.focus();
+
+        input.focus({ preventScroll: true });
+
     }
+
 }
